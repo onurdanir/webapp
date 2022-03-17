@@ -1,0 +1,24 @@
+<app-breadcrumb [path]="routes.Chat_rooms_CREATE"></app-breadcrumb>
+
+<mat-card class="card">
+  <mat-card-title>
+    <h4 class="h4">New Chat_rooms</h4>
+  </mat-card-title>
+
+  <mat-card-content [formGroup]="form">
+    <div class="input-wrapper">
+      <p class="input-title">Name</p>
+      <mat-form-field appearance="legacy" class="input-field">
+        <input
+          matInput
+          formControlName="name"
+          placeholder="Name"
+          class="input-text"
+        />
+      </mat-form-field>
+    </div>
+
+    <button (click)="onCreate()" mat-flat-button color="success">Create</button>
+    <button (click)="onCancel()" mat-flat-button color="default">Cancel</button>
+  </mat-card-content>
+</mat-card>
